@@ -14,7 +14,7 @@ node_modules/
 # ignore jekyll build directory
 /_site
 
-# ignore distribution folder
+# ignore the distribution folder
 dist/
 
 # ignore OS generated files
@@ -56,4 +56,3 @@ Thumbs.db
 # track these files, if they exist
 !.gitignore
 !.editorconfig
-dist/index.html
