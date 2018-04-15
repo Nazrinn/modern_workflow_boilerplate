@@ -17,6 +17,7 @@
 body {
   background-color: var(--bodyTextColor);
   display: inline-flex;
+  width: 100%;
 }
 
 #container {
