@@ -1,14 +1,13 @@
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
   entry: ["babel-polyfill", "./src"],
-  /*devtool: 'inline-source-map',
-  devServer: {
-    hot: true
-  },*/
+  performance: {
+    hints: process.env.NODE_ENV === 'production' ? "warning" : false
+  },
   module: {
     rules: [
       {
@@ -29,25 +28,20 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          {loader: 'MiniCssExtractPlugin.loader'},
-          {loader: 'css-loader'}
+        use:  [
+          {loader: MiniCssExtractPlugin.loader},
+          {loader: 'css-loader', options: {importLoaders: 1}},
+          {loader: 'postcss-loader'}
         ]
       }
     ]
   },
-  optimization: {
-    minimizer: [
-      new OptimizeCSSAssetsPlugin({})
-    ]
-  },
   plugins: [
-    //new webpack.NamedModulesPlugin(),
-    //new webpack.HotModuleReplacementPlugin(),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html"
     }),
+    new DashboardPlugin(),
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css"

@@ -1,3 +1,92 @@
-*{
-  font-family: 'Verdana';
+/* ▮▮▮▮▮▮▮▮▮▮▮▮▮ IMPORTS ▮▮▮▮▮▮▮▮▮▮▮▮▮ */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+/* ▮▮▮▮▮▮▮▮▮▮▮▮ VARIABLES ▮▮▮▮▮▮▮▮▮▮▮▮ */
+:root {
+  --bodyTextColor: #fdfdff;
+  --titleColor: #a9c9ca;
+  --accentColor: #ffd9da;
+  --backgroundColor: #5d5d81;
 }
+
+/* ▮▮▮▮▮▮▮▮▮▮▮▮▮ STYLES ▮▮▮▮▮▮▮▮▮▮▮▮▮ */
+* {
+  color: var(--bodyTextColor);
+}
+
+body {
+  background-color: var(--bodyTextColor);
+  display: inline-flex;
+}
+
+#container {
+  background-color: var(--backgroundColor);
+  width: calc(100% - 10%);
+  margin: 0 auto;
+  padding: 30px 25px;
+  min-height: 100vh;
+}
+
+section/*:not(:last-child)*/ {
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid var(--bodyTextColor);
+}
+
+section:first-child {
+  padding-top: 30px;
+  border-top: 2px solid var(--bodyTextColor);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  & span{
+    display: inline-block;
+    background-color: var(--bodyTextColor);
+    color: var(--titleColor);
+    padding: 5px 15px;
+  }
+}
+
+h1 {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+p#intro {
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+p#end {
+  margin-top: 40px;
+  margin-bottom: 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+#container a {
+  color: var(--accentColor);
+}
+
+dt {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+dd {
+  margin-left: 10px;
+}
+
+/* ▮▮▮▮▮▮▮▮▮▮▮▮ ANIMATIONS ▮▮▮▮▮▮▮▮▮▮▮▮ */
+
+/* ▮▮▮▮▮▮▮▮▮▮▮ MEDIA QUERIES ▮▮▮▮▮▮▮▮▮▮▮ */
