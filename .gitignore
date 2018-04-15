@@ -14,7 +14,7 @@ node_modules/
 # ignore jekyll build directory
 /_site
 
-# ignore the distribution folder
+# ignore the distribution directory
 dist/
 
 # ignore OS generated files
