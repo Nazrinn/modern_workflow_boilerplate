@@ -23,6 +23,7 @@ body {
 #container {
   background-color: var(--backgroundColor);
   width: calc(100% - 10%);
+  max-width: 960px;
   margin: 0 auto;
   padding: 30px 25px;
   min-height: 100vh;
