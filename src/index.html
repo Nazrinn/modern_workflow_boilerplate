@@ -23,6 +23,8 @@
             <dd>Supported by <a href="https://github.com/postcss/postcss-import">CSS Imports</a> and <a href="http://postcss.org">PostCSS</a>.</dd>
             <dt>CSS grid system</dt>
             <dd>Supported by <a href="https://getbootstrap.com">Bootstrap</a>, <a href="http://lostgrid.org">Lost Grid</a> and <a href="http://postcss.org">PostCSS</a>.</dd>
+            <dt>Ditribution file cleaning</dt>
+            <dd>Supported by <a href="https://github.com/johnagan/clean-webpack-plugin">Clean Webpack Plugin</a>.</dd>
             <dt>Webpack Dashboard</dt>
             <dd>Supported by <a href="https://github.com/FormidableLabs/webpack-dashboard">Webpack Dashboard</a> and <a href='https://webpack.js.org'>Webpack</a>.</dd>
           </dl>
@@ -31,8 +33,8 @@
         <h2><span>Production features</span></h2>
         <p>Production features are composed of modules that determine in which form the final code will be rendered.</p>
         <dl>
-          <dt>JavaScript minification</dt>
-          <dd>Supported by <a href='https://webpack.js.org'>Webpack</a>.</dd>
+          <dt>JavaScript minification and optimization</dt>
+          <dd>Supported by <a href="https://github.com/webpack-contrib/uglifyjs-webpack-plugin">UglifyJS Webpack Plugin</a> <a href='https://webpack.js.org'>Webpack</a>.</dd>
           <dt>CSS minification and optimization</dt>
           <dd>Supported by <a href='http://cssnano.co'>CSSNano</a> (<a href="https://www.npmjs.com/package/cssnano-preset-advanced">advanced preset</a>) and <a hreft='https://github.com/hail2u/node-css-mqpacker'>CSS MQPacker</a> and <a href="http://postcss.org">PostCSS</a>.</dd>
           <dt>CSS Normalization and base</dt>
@@ -43,7 +45,7 @@
       </section>
       <section>
         <h2><span>Loaders</span></h2>
-        <p><a href='https://webpack.js.org/loaders/'>Loaders</a> are modules that help Webpack process the code and assets to build them for production. Webpack is able to process and optimize JavaScript files on its own, but for any other tasks, it needs the help of independant loaders.</p>
+        <p><a href='https://webpack.js.org/loaders/'>Loaders</a> are modules that help Webpack process the code and assets to build them for production. Webpack is able to process and optimize JavaScript and JSON files on its own, but for any other tasks, it needs the help of independant loaders.</p>
         <dl>
           <dt><a href='https://github.com/babel/babel-loader'>Babel Loader</a></dt>
           <dd>Allows Webpack to transpile ES6 JavaScript into ES5 Javascript.</dd>
@@ -51,6 +53,8 @@
           <dd>Allows Webpack to process CSS files modified with PostCSS and create a separate CSS file for production.</dd>
           <dt><a href='https://github.com/webpack-contrib/html-loader'>HTML Loader</a></dt>
           <dd>Allows Webpack process to HTML files and create the HTML production files.</dd>
+          <dt><a href='https://github.com/webpack-contrib/file-loader'>File Loader</a></dt>
+          <dd>Allows Webpack process static files like images and font files.</dd>
         </dl>
       </section>
     </div>
