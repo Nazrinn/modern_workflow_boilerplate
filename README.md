@@ -1,7 +1,6 @@
 # modern_workflow_boilerplate
 A morden workflow boilerplate composed of simple tools, Babel (for ES6 Javascript) and PostCSS (PreCSS for next-generation CSS) and optimisation tools. Perfect for simple landing page or test projects.
 
-```html
 <div>
         <section>
           <h2><span>Development features</span></h2>
