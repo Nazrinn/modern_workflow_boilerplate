@@ -2,10 +2,10 @@
 A morden workflow boilerplate composed of Babel (for ES6 Javascript) and PostCSS (PreCSS for next-generation CSS) and optimisation tools. Perfect for simple landing page or test projects.
 Just clone and run it! - Build on <b>Webpack 4</b>.
 
-<h2>Feature list</h2>
+<h1>Feature list</h1>
 <div>
         <section>
-          <h3><span>Development features</span></h3>
+          <h2><span>Development features</span></h2>
           <p>Development features are composed of modules that are used during the production of the web page. They don't appear on the final result.</p>
           <dl>
             <dt>Hot reloading and module replacement</dt>
@@ -26,7 +26,7 @@ Just clone and run it! - Build on <b>Webpack 4</b>.
           </dl>
       </section>
       <section>
-        <h3><span>Production features</span></h3>
+        <h2><span>Production features</span></h2>
         <p>Production features are composed of modules that determine in which form the final code will be rendered.</p>
         <dl>
           <dt>JavaScript minification and optimization</dt>
@@ -40,7 +40,7 @@ Just clone and run it! - Build on <b>Webpack 4</b>.
         </dl>
       </section>
       <section>
-        <h3><span>Loaders</span></h3>
+        <h2><span>Loaders</span></h2>
         <p><a href='https://webpack.js.org/loaders/'>Loaders</a> are modules that help Webpack process the code and assets to build them for production. Webpack is able to process and optimize JavaScript and JSON files on its own, but for any other tasks, it needs the help of independant loaders.</p>
         <dl>
           <dt><a href='https://webpack.js.org'>Webpack</a></dt>
