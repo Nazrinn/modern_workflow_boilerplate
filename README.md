@@ -1,5 +1,6 @@
 # Modern Workflow Boilerplate
-A morden workflow boilerplate composed of simple tools, Babel (for ES6 Javascript) and PostCSS (PreCSS for next-generation CSS) and optimisation tools. Perfect for simple landing page or test projects.
+A morden workflow boilerplate composed of Babel (for ES6 Javascript) and PostCSS (PreCSS for next-generation CSS) and optimisation tools. Perfect for simple landing page or test projects.
+Just clone and run it! - Build on <b>Webpack 4</b>.
 
 <h2>Feature list</h2>
 <div>
