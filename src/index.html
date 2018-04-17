@@ -2,6 +2,7 @@
 <html lang='en'>
 <head>
     <meta charset='utf-8'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <title>Modern Workflow Boilerplate</title>
 </head>
 <body>
@@ -22,11 +23,12 @@
             <dt>CSS @import rule</dt>
             <dd>Supported by <a href="https://github.com/postcss/postcss-import">CSS Imports</a> and <a href="http://postcss.org">PostCSS</a>.</dd>
             <dt>CSS grid system</dt>
-            <dd>Supported by <a href="https://getbootstrap.com">Bootstrap</a>, <a href="http://lostgrid.org">Lost Grid</a> and <a href="http://postcss.org">PostCSS</a>.</dd>
-            <dt>Ditribution file cleaning</dt>
+            <dd>Supported by <a href="https://getbootstrap.com">Bootstrap</a>, <a href="http://lostgrid.org">Lost Grid</a> and <a href="http://postcss.org">PostCSS</a>. <br />
+            Note that Bootstrap was directly included in the HTML <a href="https://www.bootstrapcdn.com">Bootstrap CDN</a> in a &lt;link /&gt;. - Use <a href='https://developers.google.com/web/fundamentals/primers/service-workers/'>service workers</a> to include CDN files in bigger projects.</dd>
+            <dt>Ditribution files' cleaning</dt>
             <dd>Supported by <a href="https://github.com/johnagan/clean-webpack-plugin">Clean Webpack Plugin</a>.</dd>
-            <dt>Webpack Dashboard</dt>
-            <dd>Supported by <a href="https://github.com/FormidableLabs/webpack-dashboard">Webpack Dashboard</a> and <a href='https://webpack.js.org'>Webpack</a>.</dd>
+            <dt>Error Reporting (Web console)</dt>
+            <dd>Supported by <a href="https://github.com/smooth-code/error-overlay-webpack-plugin">Error Overlay Webpack Plugin</a> and <a href='https://webpack.js.org'>Webpack</a>.</dd>
           </dl>
       </section>
       <section>
@@ -34,7 +36,7 @@
         <p>Production features are composed of modules that determine in which form the final code will be rendered.</p>
         <dl>
           <dt>JavaScript minification and optimization</dt>
-          <dd>Supported by <a href="https://github.com/webpack-contrib/uglifyjs-webpack-plugin">UglifyJS Webpack Plugin</a> <a href='https://webpack.js.org'>Webpack</a>.</dd>
+          <dd>Supported by <a href="https://github.com/webpack-contrib/uglifyjs-webpack-plugin">UglifyJS Webpack Plugin</a> and <a href='https://webpack.js.org'>Webpack</a>.</dd>
           <dt>CSS minification and optimization</dt>
           <dd>Supported by <a href='http://cssnano.co'>CSSNano</a> (<a href="https://www.npmjs.com/package/cssnano-preset-advanced">advanced preset</a>) and <a hreft='https://github.com/hail2u/node-css-mqpacker'>CSS MQPacker</a> and <a href="http://postcss.org">PostCSS</a>.</dd>
           <dt>CSS Normalization and base</dt>
@@ -47,10 +49,12 @@
         <h2><span>Loaders</span></h2>
         <p><a href='https://webpack.js.org/loaders/'>Loaders</a> are modules that help Webpack process the code and assets to build them for production. Webpack is able to process and optimize JavaScript and JSON files on its own, but for any other tasks, it needs the help of independant loaders.</p>
         <dl>
+          <dt><a href='https://webpack.js.org'>Webpack</a></dt>
+          <dd>Load JavaScript files for production.</dd>
           <dt><a href='https://github.com/babel/babel-loader'>Babel Loader</a></dt>
           <dd>Allows Webpack to transpile ES6 JavaScript into ES5 Javascript.</dd>
-          <dt><a href='https://github.com/webpack-contrib/css-loader'>CSS Loader</a>, <a href="https://github.com/postcss/postcss-loader">PostCSS Loader</a> and <a href='https://github.com/webpack-contrib/mini-css-extract-plugin'>MiniCssExtractPlugin</a></dt>
-          <dd>Allows Webpack to process CSS files modified with PostCSS and create a separate CSS file for production.</dd>
+          <dt> <a href='https://github.com/webpack-contrib/style-loader'>Style Loader</a>, <a href='https://github.com/webpack-contrib/css-loader'>CSS Loader</a> and <a href="https://github.com/postcss/postcss-loader">PostCSS Loader</a></dt>
+          <dd>Allows Webpack to process @import rules and url() function in CSS files modified with PostCSS. The style is finally rendered at the head of the page.</dd>
           <dt><a href='https://github.com/webpack-contrib/html-loader'>HTML Loader</a></dt>
           <dd>Allows Webpack process to HTML files and create the HTML production files.</dd>
           <dt><a href='https://github.com/webpack-contrib/file-loader'>File Loader</a></dt>
@@ -58,7 +62,7 @@
         </dl>
       </section>
     </div>
-    <p id='end'>Made with &#10084; by Nazrinn - Last modification made the 15th of April 2018.</p>
+    <p id='end'>Made with &#10084; by Nazrinn - Last modified the 16th of April 2018.</p>
   </div>
 </body>
 </html>

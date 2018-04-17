@@ -2,15 +2,15 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CSSSplitWebpackPlugin = require('css-split-webpack-plugin').default;
-const DashboardPlugin = require('webpack-dashboard/plugin');
+const ErrorOverlayPlugin = require('error-overlay-webpack-plugin')
+
 
 module.exports = {
   entry: ["babel-polyfill", "./src"],
   output: {
-    filename: 'script.min.js',
-    chunkFilename: '[name].min.js'
+    filename: 'script.js',
+    chunkFilename: '[name].[ext]'
   },
   performance: {
     hints: process.env.NODE_ENV === 'production' ? "warning" : false
@@ -36,8 +36,12 @@ module.exports = {
       {
         test: /\.css$/,
         use:  [
-          {loader: MiniCssExtractPlugin.loader},
-          {loader: 'css-loader', options: {importLoaders: 1}},
+          {loader: 'style-loader'},
+          {loader: 'css-loader',
+            options: {
+              importLoaders: 1
+            }
+          },
           {loader: 'postcss-loader'}
         ]
       },
@@ -46,7 +50,8 @@ module.exports = {
         use: [{
           loader: 'file-loader',
          options: {
-           outputPath: 'images/'
+           outputPath: 'images/',
+           name: '[name].[ext]'
          }
        }]
      },
@@ -55,7 +60,8 @@ module.exports = {
         use: [{
          loader: 'file-loader',
          options: {
-           outputPath: 'fonts/'
+           outputPath: 'fonts/',
+           name: '[name].[ext]'
          }
        }]
      },
@@ -64,7 +70,8 @@ module.exports = {
        use: [{
         loader: 'file-loader',
         options: {
-          outputPath: 'videos/'
+          outputPath: 'videos/',
+          name: '[name].[ext]'
         }
       }]
     }
@@ -74,7 +81,7 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
-      filename: "./index.html"
+      filename: "index.html"
     }),
     new UglifyJsPlugin({
       test: /\.js($|\?)/i,
@@ -94,11 +101,7 @@ module.exports = {
         safari10: false,
       }
     }),
-    new MiniCssExtractPlugin({
-      filename: "style.min.css",
-      chunkFilename: "[name].min.css"
-    }),
     new CSSSplitWebpackPlugin({size: 4000}),
-    new DashboardPlugin()
+    new ErrorOverlayPlugin()
   ]
 };

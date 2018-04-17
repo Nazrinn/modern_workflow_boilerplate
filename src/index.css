@@ -1,12 +1,13 @@
 /* ▮▮▮▮▮▮▮▮▮▮▮▮▮ IMPORTS ▮▮▮▮▮▮▮▮▮▮▮▮▮ */
-@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 /* ▮▮▮▮▮▮▮▮▮▮▮▮ VARIABLES ▮▮▮▮▮▮▮▮▮▮▮▮ */
 :root {
-  --bodyTextColor: #fdfdff;
-  --titleColor: #a9c9ca;
-  --accentColor: #ffd9da;
-  --backgroundColor: #5d5d81;
+  --bodyTextColor: #FEFEFF;
+  --titleColor: color(var(--backgroundColor) whiteness(20%));;
+  --backgroundTitleColor: #AFE0CE;
+  --accentColor: #D6F49D;
+  --backgroundColor: color(#242124 blackness(100%));
+  --bodyBackgroundColor: color(var(--backgroundColor) whiteness(13%));
 }
 
 /* ▮▮▮▮▮▮▮▮▮▮▮▮▮ STYLES ▮▮▮▮▮▮▮▮▮▮▮▮▮ */
@@ -15,15 +16,18 @@
 }
 
 body {
-  background-color: var(--bodyTextColor);
-  display: inline-flex;
+  background-color: var(--bodyBackgroundColor);
+  background: var(--bodyBackgroundColor)
+  /*Working exanple: */
+  /*background: var(--bodyBackgroundColor) url("./assets/media/thvoyage.jpg") center no-repeat padding-box*/	border-box fixed;
+  background-size: cover;
   width: 100%;
 }
 
 #container {
   background-color: var(--backgroundColor);
   width: calc(100% - 10%);
-  max-width: 960px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 30px 25px;
   min-height: 100vh;
@@ -44,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   & span{
     display: inline-block;
-    background-color: var(--bodyTextColor);
+    background-color: var(--backgroundTitleColor);
     color: var(--titleColor);
     padding: 5px 15px;
   }
